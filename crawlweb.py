@@ -100,10 +100,6 @@ def linkFinder(page, baseUrl=None):
     - Removes URL fragments (e.g., `#section`) as they are not necessary for link processing.
     - Filters out URLs with unsupported schemes (e.g., `mailto:`, `ftp:`).
 
-    Example:
-    >>> html_content = '<a href="/path/to/resource">Link</a><a href="https://example.com">Absolute Link</a>'
-    >>> linkFinder(html_content, baseUrl='https://example.com')
-    {'https://example.com/path/to/resource', 'https://example.com'}
     """
     urls = set()
     baseUrl = baseUrl or ''
